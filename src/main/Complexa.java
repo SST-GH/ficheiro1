@@ -13,7 +13,7 @@ public class Complexa {
 		int numA = multi.nextInt();
 		int numB = multi.nextInt();
 
-		int a = (numA * numB) + (numA - numB);
+		int a = (numA * numB) - (numA - numB);
 
 		System.out.println("Resultado " + a);
 	}
