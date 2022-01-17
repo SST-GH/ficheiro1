@@ -1,7 +1,19 @@
 package main;
 
-public class Complexa {
+import java.util.Scanner;
 
+public class Complexa {
+	
+	public static void main(String [] arg) {
+		
+		Scanner dadosUt = new Scanner(System.in);
+		
+		int numUm = dadosUt.nextInt();
+		System.out.println("Insira primeiro numero: " + numUm);
+		
+		int numDois = dadosUt.nextInt();
+		System.out.println("Insira segundo numero: " + numDois);
+	}
 }
 
 
