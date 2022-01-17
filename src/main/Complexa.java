@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Complexa {
 	
-	public static void main(String [] arg) {
+	public static void operacaoComplexa(String [] arg) {
 		
 		Scanner dadosUt = new Scanner(System.in);
 		
@@ -13,10 +13,15 @@ public class Complexa {
 		
 		int numDois = dadosUt.nextInt();
 		System.out.println("Insira segundo numero: " + numDois);
+		
+
+		
+		
 	}
 }
 
 
+// (numUm*numDois) + (numUm-numDois).
 
 
 
@@ -30,6 +35,6 @@ public class Complexa {
 //com a subtração desses dois números. Deverá utilizar as funções já definidas previamente. 
 
 //multiplicação(a,b)+ subtração(a,b)
-//multiplicaçãoa,b+ subtração(a,b)
+
  
  
