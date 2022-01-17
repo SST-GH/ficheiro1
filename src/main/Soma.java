@@ -4,8 +4,11 @@ public class Soma {
 	
 	public static void main (String[] args){
 		
-		int soma = 20 + 20;
-		System.out.println("Resultado: " + soma);
+		int x = 20;
+		int y = 20;
+		int q = x + y;
+		
+		System.out.println("Resultado: " + q);
 	}
 
 }

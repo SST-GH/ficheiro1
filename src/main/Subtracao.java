@@ -3,8 +3,11 @@ package main;
 public class Subtracao {
 public static void main (String[] args){
 		
-		int subtracao = 20 - 20;
-		System.out.println("Resultado: " + subtracao);
+		int x = 20;
+		int y = 20;
+		int q = x - y;
+		
+		System.out.println("Resultado: " + q);
 	}
 
 }
