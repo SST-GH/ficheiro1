@@ -26,16 +26,16 @@ public class Exerc {
         float y = dadosUt.nextFloat();
         float z = dadosUt.nextFloat();
         System.out.println("A area é igual a: " + areaCal(x, y, z));
-        
+        */
         
         System.out.println("Insira um número factorial: ");
-        float n = dadosUt.nextFloat();
+        int n = dadosUt.nextInt();
         System.out.println("Os números factoriais são: " + factor(n));
         
         System.out.println("Insira um número fatorial rec: ");
         int s = dadosUt.nextInt();
         System.out.println("Os números factoriais rec são: " + factorRecursivo(s));
-        */
+        
     	
     	System.out.println("Insira uma frase: ");
     	String frase = dadosUt.nextLine();
@@ -75,10 +75,10 @@ public class Exerc {
 		}
 	}
 	
-	public static float factor(float n) {
-		float r =1;
-		for (float i = 1; i <= n; i++) {
-
+	public static int factor(int n) {
+		int r =1;
+		for (int i = 1; i <= n; i++) {
+			System.out.println( r + "*" + i + "=" + r);
 		     r= r*i;
 		}
 		
