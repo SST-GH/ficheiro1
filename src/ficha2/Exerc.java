@@ -6,28 +6,43 @@ public class Exerc {
 	public static void main(String[] args) {
 		
     	Scanner dadosUt = new Scanner(System.in);
-        /*
-    	System.out.println("Insira valores para a altura e a base do triangulo: ");
+        
+    	/*System.out.println("Insira valores para a altura e a base do triangulo: ");
+        float b = dadosUt.nextFloat();
         float h = dadosUt.nextFloat();
         
-        float b = dadosUt.nextFloat();
         float area = areaTriang(b, h);
         System.out.println("Area do triangulo é: " + area);
         
         System.out.println("Insira valores para a altura e o cumprimento do retangulo: ");
+        float a = dadosUt.nextFloat();
         float c = dadosUt.nextFloat();
-        float area2 =  areaRetang(h,c);
+        
+        float area2 =  areaRetang(a,c);
         System.out.println("Area do retangulo é: " + area2);
         
-        System.out.println("Insira valores para z: ");
+        System.out.println("Insira valores: ");
+        float x = dadosUt.nextFloat();
+        float y = dadosUt.nextFloat();
         float z = dadosUt.nextFloat();
-        float area3 = areaCal(b, c, h, z);
-        System.out.println("A area é igual a: " + area3);
-        */
+        System.out.println("A area é igual a: " + areaCal(x, y, z));
+        
         
         System.out.println("Insira um número factorial: ");
         float n = dadosUt.nextFloat();
         System.out.println("Os números factoriais são: " + factor(n));
+        
+        System.out.println("Insira um número fatorial rec: ");
+        int s = dadosUt.nextInt();
+        System.out.println("Os números factoriais rec são: " + factorRecursivo(s));
+        */
+    	
+    	System.out.println("Insira uma frase: ");
+    	String frase = dadosUt.nextLine();
+    	int minusculas = numTotalVogais(frase.toLowerCase());//para transformar tudo em minúsculas caso forem inseridas.
+    	System.out.println("O número das vogais é: " + minusculas);
+    	
+    	
         
         		
 
@@ -35,39 +50,60 @@ public class Exerc {
 	
 	public static float areaTriang(float b, float h) {
 		
-		float area = ((b * h) / 2);
+		float area = ((b * h) / 2); //caso usarmos esta função para outras vezes.
 		return area;
+		//ou return ((b*h)/2); para usar so aqui
 	}
 	
-	public static float areaRetang (float h, float c) {
-		float area2 = (h*c);
+	public static float areaRetang (float a, float c) {
+		float area2 = (a*c); //caso usarmos esta função para outras vezes.
 		return area2;
+		//ou return (a*c); para usar so aqui.
 	}
 	
 	
-	public static float areaCal(float b, float c, float h, float z) {
-		float area = ((b * h) / 2);
-		float area2 = (h*c);
+	public static float areaCal(float x, float y, float z) {
 		
-		float area3 = 0;
 		if(z==1) {
-			System.out.println("Area é igual ao do triangulo: " + area);
-			return area;
+			System.out.println("Area é igual ao do triângulo: ");
+			return areaTriang(x,y);
+			
 		}
 		else {
-			return area2;
+			System.out.println("Area é igual ao do retângulo: ");
+			return areaRetang (x,y);
 		}
 	}
 	
-	public static void factor(float n) {
-		for (float i = 1; i <= n; ++i) {
+	public static float factor(float n) {
+		float r =1;
+		for (float i = 1; i <= n; i++) {
 
-		      // if number is divided by i
-		      // i is the factor
-		      if (n % i == 0) {
-		        System.out.print(n + " ");
-		      }
+		     r= r*i;
 		}
+		
+		return r;
 	}
+	
+	public static long factorRecursivo(int s ){
+	    return s == 1 ? 1 : s * factorRecursivo( s-1 );
+	}
+	
+	public static int numTotalVogais (String fr) {
+		
+		int contar = 0;
+		for(int i = 0; i <fr.length(); i++) {
+			
+			if (fr.charAt(i) == 'a' || fr.charAt(i) == 'e' || fr.charAt(i) == 'i'
+                    || fr.charAt(i) == 'o' || fr.charAt(i) == 'u') {
+				contar++;
+			}
+		}
+		return contar;
+	}
+	
+	
+	
+	
 	
 	}
