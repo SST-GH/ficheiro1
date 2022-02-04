@@ -42,10 +42,10 @@ public class Exerc {
 //    	int minusculas = numTotalVogais(frase.toLowerCase());//para transformar tudo em minúsculas caso forem inseridas.
 //    	System.out.println("O número das vogais é: " + minusculas);
     	
-    	System.out.println("Insira uma frase: ");
-    	String f = dadosUt.nextLine();
-    	int minu = numVogais(f.toLowerCase());//para transformar tudo em minúsculas caso forem inseridas.
-    	System.out.println(minu);
+//    	System.out.println("Insira uma frase: ");
+//    	String f = dadosUt.nextLine();
+//    	numVogais(f.toLowerCase());//para transformar tudo em minúsculas caso forem inseridas.
+//    	System.out.println("");
     	
     	
         
@@ -108,24 +108,37 @@ public class Exerc {
 		return contar;
 	}
 	
-	public void numVogais(String fr) {
+	public static void numVogais(String fr) {
 			
 			int contarA = 0, contarE = 0, contarI=0, contarO=0, contarU=0;
 			
 			for(int i = 0; i <fr.length(); i++) {
 				
-				if (fr.charAt(i) == 'a' || fr.charAt(i) == 'e' || fr.charAt(i) == 'i'
-	                    || fr.charAt(i) == 'o' || fr.charAt(i) == 'u') {
-					
+				if (fr.charAt(i) == 'a') {
 					contarA++;
+				}
+			
+				else if (fr.charAt(i) == 'e') {
 					contarE++;
+				}
+				else if (fr.charAt(i) == 'i') {
 					contarI++;
+				}
+				else if (fr.charAt(i) == 'o') {
 					contarO++;
+				}
+				else if (fr.charAt(i) == 'u') {
 					contarU++;
 				}
+					
+				}
+			
+			System.out.println("a: " + contarA + "\ne: " +contarE + "\ni: " +contarI + "\no: " +contarO + "\nu: " +contarU);
 			}
-			System.out.println("a: " + contarA + "e: " +contarE + "i: " +contarI + "o: " +contarO + "u: " +contarU);
-		}
+	
+	
+	
+		
 
 
 }
