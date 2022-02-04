@@ -47,6 +47,9 @@ public class Exerc {
 //    	numVogais(f.toLowerCase());//para transformar tudo em minúsculas caso forem inseridas.
 //    	System.out.println("");
     	
+    	System.out.println("Insira o número de segundos: ");
+    	int seg = dadosUt.nextInt();
+    	convertSeconds(seg);
     	
         
         		
@@ -137,6 +140,34 @@ public class Exerc {
 			}
 	
 	
+	
+//	Escreva uma função chamada convertSeconds que recebe um número (segundos) e 
+//	imprime o número de minutos, horas, dias e meses (considere que um mês tem 30 dias)
+	public static void convertSeconds(int segs) {
+		int minutos, horas, dias, meses;
+		
+		minutos = segs/60;
+		horas = segs/3600;
+		dias = segs/86400;
+		meses = segs/2_592_000;
+		
+		System.out.println("Minutos: " + minutos + "\nHoras: " + horas + "\nDias: " + dias + "\nMeses: " + meses);
+		
+		
+		
+//		min = 60 Seg
+//		h = 3600 Seg (60*60)
+//		d = 86400 Seg (24*3600)
+//		mes = 2 592 000 Seg (86400*30)
+		
+//		numberOfDays = input / 86400;
+//		numberOfHours = (input % 86400 ) / 3600 ;
+//		numberOfMinutes = ((input % 86400 ) % 3600 ) / 60 
+//		numberOfSeconds = ((input % 86400 ) % 3600 ) % 60  ;
+		
+		
+		
+	}
 	
 		
 
