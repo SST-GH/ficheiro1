@@ -28,19 +28,24 @@ public class Exerc {
         System.out.println("A area é igual a: " + areaCal(x, y, z));
         */
         
-        System.out.println("Insira um número factorial: ");
-        int n = dadosUt.nextInt();
-        System.out.println("Os números factoriais são: " + factor(n));
-        
-        System.out.println("Insira um número fatorial rec: ");
-        int s = dadosUt.nextInt();
-        System.out.println("Os números factoriais rec são: " + factorRecursivo(s));
+//        System.out.println("Insira um número factorial: ");
+//        int n = dadosUt.nextInt();
+//        System.out.println("Os números factoriais são: " + factor(n));
+//        
+//        System.out.println("Insira um número fatorial rec: ");
+//        int s = dadosUt.nextInt();
+//        System.out.println("Os números factoriais rec são: " + factorRecursivo(s));
         
     	
+//    	System.out.println("Insira uma frase: ");
+//    	String frase = dadosUt.nextLine();
+//    	int minusculas = numTotalVogais(frase.toLowerCase());//para transformar tudo em minúsculas caso forem inseridas.
+//    	System.out.println("O número das vogais é: " + minusculas);
+    	
     	System.out.println("Insira uma frase: ");
-    	String frase = dadosUt.nextLine();
-    	int minusculas = numTotalVogais(frase.toLowerCase());//para transformar tudo em minúsculas caso forem inseridas.
-    	System.out.println("O número das vogais é: " + minusculas);
+    	String f = dadosUt.nextLine();
+    	int minu = numVogais(f.toLowerCase());//para transformar tudo em minúsculas caso forem inseridas.
+    	System.out.println(minu);
     	
     	
         
@@ -96,14 +101,36 @@ public class Exerc {
 			
 			if (fr.charAt(i) == 'a' || fr.charAt(i) == 'e' || fr.charAt(i) == 'i'
                     || fr.charAt(i) == 'o' || fr.charAt(i) == 'u') {
+				
 				contar++;
 			}
 		}
 		return contar;
 	}
 	
+	public void numVogais(String fr) {
+			
+			int contarA = 0, contarE = 0, contarI=0, contarO=0, contarU=0;
+			
+			for(int i = 0; i <fr.length(); i++) {
+				
+				if (fr.charAt(i) == 'a' || fr.charAt(i) == 'e' || fr.charAt(i) == 'i'
+	                    || fr.charAt(i) == 'o' || fr.charAt(i) == 'u') {
+					
+					contarA++;
+					contarE++;
+					contarI++;
+					contarO++;
+					contarU++;
+				}
+			}
+			System.out.println("a: " + contarA + "e: " +contarE + "i: " +contarI + "o: " +contarO + "u: " +contarU);
+		}
+
+
+}
 	
 	
 	
 	
-	}
+
