@@ -6,6 +6,7 @@ public class Exerc {
 	public static void main(String[] args) {
 		
     	Scanner dadosUt = new Scanner(System.in);
+    	
         
     	/*System.out.println("Insira valores para a altura e a base do triangulo: ");
         float b = dadosUt.nextFloat();
@@ -52,7 +53,7 @@ public class Exerc {
     	convertSeconds(seg);
     	
         
-        		
+        dadosUt.close();
 
 	}
 	
@@ -143,28 +144,25 @@ public class Exerc {
 	
 //	Escreva uma função chamada convertSeconds que recebe um número (segundos) e 
 //	imprime o número de minutos, horas, dias e meses (considere que um mês tem 30 dias)
-	public static void convertSeconds(int segs) {
-		int minutos, horas, dias, meses;
+	public static void convertSeconds(int aSegs) {
+		int minutos = 0, horas = 0, dias = 0, meses = 0, segundos =0;
 		
-		minutos = segs/60;
-		horas = segs/3600;
-		dias = segs/86400;
-		meses = segs/2_592_000;
+		segundos = aSegs%60; //ele guarda e adiciona o resto no prox.
+		meses = aSegs/2_592_000;
+		aSegs %=2_592_000;
+		dias = aSegs/86400;
+		aSegs %=86400;
+		horas = aSegs/3600;
+		aSegs %=3600;
+		minutos = aSegs/60;
+		aSegs = aSegs%60;
 		
-		System.out.println("Minutos: " + minutos + "\nHoras: " + horas + "\nDias: " + dias + "\nMeses: " + meses);
-		
-		
+		System.out.println("Minutos: " + minutos + "\nHoras: " + horas + "\nDias: " + dias + "\nMeses: " + meses + "\nSegundos: " + segundos);
 		
 //		min = 60 Seg
 //		h = 3600 Seg (60*60)
 //		d = 86400 Seg (24*3600)
 //		mes = 2 592 000 Seg (86400*30)
-		
-//		numberOfDays = input / 86400;
-//		numberOfHours = (input % 86400 ) / 3600 ;
-//		numberOfMinutes = ((input % 86400 ) % 3600 ) / 60 
-//		numberOfSeconds = ((input % 86400 ) % 3600 ) % 60  ;
-		
 		
 		
 	}
