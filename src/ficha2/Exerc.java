@@ -141,7 +141,6 @@ public class Exerc {
 			}
 	
 	
-	
 //	Escreva uma função chamada convertSeconds que recebe um número (segundos) e 
 //	imprime o número de minutos, horas, dias e meses (considere que um mês tem 30 dias)
 	public static void convertSeconds(int aSegs) {
@@ -163,12 +162,7 @@ public class Exerc {
 //		h = 3600 Seg (60*60)
 //		d = 86400 Seg (24*3600)
 //		mes = 2 592 000 Seg (86400*30)
-		
-		
 	}
-	
-		
-
 
 }
 	
